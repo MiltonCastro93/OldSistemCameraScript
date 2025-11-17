@@ -92,10 +92,10 @@ Este prototipo sirve como base para:
 - FPS con control avanzado
 - Sistemas híbridos como GTA, Skyrim o Fallout
 
-Si necesitás mejorar el sistema con:
-✔ transiciones suaves  
-✔ colisión de cámara  
-✔ FOV dinámico  
-✔ sway de arma para FPS  
-
+Si necesitás mejorar el sistema con:<br>
+✔ transiciones suaves<br>
+✔ colisión de cámara<br>
+✔ FOV dinámico<br>
+✔ sway de arma para FPS<br>
+<br>
 solo pedímelo y te lo preparo.

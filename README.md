@@ -51,7 +51,7 @@ El objetivo del prototipo fue entender y dominar el manejo manual de cámaras, o
 ---
 
 ## 🛠️ Tecnologías Utilizadas
-- **Unity** (versión que estés usando)
+- **Unity** (versión 2021)
 - **C#** para el sistema de cámaras
 
 ---

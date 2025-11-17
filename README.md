@@ -1,65 +1,101 @@
-# Camera Switch Prototype – Third ↔ First Person (Unity)
+# Camera Switching Prototype – Third ↔ First Person (Unity, Custom System)
 
-Este es un **prototipo simple y funcional** creado para experimentar el cambio dinámico de cámara entre **tercera persona** y **primera persona**, programado **completamente desde cero**, sin utilizar **Cinemachine** ni paquetes adicionales.
+Este proyecto es un **prototipo propio** donde se implementa un sistema de cámaras programado **desde cero**, sin utilizar Cinemachine ni controladores prearmados.  
+El objetivo fue comprender el comportamiento interno de una cámara TPS/FPS y cómo interactúa con el personaje, el mundo y la rotación.
 
-El objetivo del prototipo fue entender y dominar el manejo manual de cámaras, offsets, rotaciones y transiciones.
+El sistema cuenta con **tres scripts principales**, cada uno cumpliendo un rol específico:  
+- Control manual de la cámara en tercera persona.  
+- Sistema de cambio entre cámaras.  
+- Un sistema auxiliar para dirigir la mirada del personaje.
 
 ---
 
-## 🎮 Características
+## 🎮 Características del Prototipo
 
-### 🔄 Cambio de Cámara con un Botón
-- Un solo botón alterna entre:
-  - **Tercera Persona** (vista detrás del personaje)
-  - **Primera Persona** (vista desde la cabeza del personaje)
-- El cambio es instantáneo y sin dependencias externas.
+### 🔄 Cambio de Cámara con un Solo Botón
+- Permite alternar entre:
+  - **Cámara en tercera persona (TPS)**
+  - **Cámara en primera persona (FPS)**
+- Programado 100% desde 0.
+- No depende de Cinemachine.
+- Las cámaras se activan/desactivan limpiamente.
 
-### 📷 Cámaras Programadas Desde 0
-- Sin Cinemachine.
-- Control total sobre:
-  - Posición relativa al personaje.
-  - Rotación interpolada según el input del mouse.
-  - Offsets personalizados asociados a cada modo de cámara.
-- Código limpio para extender o integrar en futuros proyectos.
+---
 
-### 🧍 Control del Personaje
-- Movimiento básico en tercera persona.
-- En primera persona, el control rota directamente la vista.
-- Cursor bloqueado en modo juego.
+## 📷 Scripts Incluidos
+
+### 1️⃣ **C3Camera.cs — Control completo de cámara en tercera persona**
+Este script controla el movimiento y rotación de la cámara TPS de forma manual:
+- Rotación con los ejes Horizontal y Vertical.
+- Limitación del ángulo máximo permitido para evitar giros irreales.
+- Mantiene el eje Z estable para evitar inclinaciones no deseadas.
+- Ajusta la cámara para que siempre mire hacia el personaje.
+- Se ejecuta en **LateUpdate** para evitar jitter visual.
+
+Este componente ofrece un control fino, ideal para un TPS personalizado.
+
+---
+
+### 2️⃣ **CCambio.cs — Sistema de cambio entre cámaras**
+Controla el **switch** entre primera y tercera persona usando la tecla **C**:
+- Enciende y apaga cada cámara correctamente.
+- Restablece la rotación inicial para evitar errores acumulados.
+- Permite ampliar el sistema a más cámaras fácilmente.
+
+Es el encargado de alternar entre **Cam1** (TPS) y **Cam2** (FPS).
+
+---
+
+### 3️⃣ **Look.cs — Control de mirada del personaje**
+Este script agrega un comportamiento adicional al personaje:
+- Utiliza un objeto “Ojos” que siempre mira hacia un objetivo específico.
+- Crea la sensación de que el personaje sigue el punto de interés o dirección de movimiento.
+- Útil para animaciones, apuntado o interacción visual.
 
 ---
 
 ## 🧪 Estado del Prototipo
-- Funcional como base para un sistema de cámara avanzado.
-- No incluye combate, animaciones complejas ni interacción con objetos.
-- Perfecto para continuar un TPS o FPS híbrido.
+- Totalmente funcional como base para un sistema TPS/FPS híbrido.
+- El cambio entre cámaras es estable y sencillo.
+- Faltan mejorar suavizados, colisión de cámara y transiciones.
+- Pensado como un proyecto experimental para entender cámaras sin frameworks externos.
 
 ---
 
-## 🖼️ Imágenes / Capturas
+## 🖼️ Imágenes del Proyecto
 
-> Subí tus imágenes a una carpeta `/Images` dentro del repo y reemplazá los nombres:
+> Guardá tus capturas en una carpeta `/Images` y reemplazá los nombres en el README:
 
 <p align="center">
-  <img src="Images/camera_tps.png" width="500"/>
+  <img src="Images/camera_tps_view.png" width="500"/>
 </p>
 
 <p align="center">
-  <img src="Images/camera_fps.png" width="500"/>
+  <img src="Images/camera_fps_view.png" width="500"/>
+</p>
+
+<p align="center">
+  <img src="Images/player_look_system.png" width="500"/>
 </p>
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
-- **Unity** (versión 2021)
-- **C#** para el sistema de cámaras
+## 🛠️ Tecnologías
+- **Unity** (versión utilizada en el prototipo)
+- **C#** (control total del comportamiento de cámaras)
 
 ---
 
 ## 📌 Notas Finales
-Este prototipo sirve como base sólida para juegos que combinan ambas perspectivas.  
-El sistema puede extenderse fácilmente añadiendo:
-- Suavizado de transición
-- Ajuste de FOV por modo
-- Vibración o recoil en primera persona
-- Colisión de cámara en tercera persona
+Este prototipo sirve como base para:
+- TPS completos
+- FPS con control avanzado
+- Sistemas híbridos como GTA, Skyrim o Fallout
+
+Si necesitás mejorar el sistema con:
+✔ transiciones suaves  
+✔ colisión de cámara  
+✔ FOV dinámico  
+✔ sway de arma para FPS  
+
+solo pedímelo y te lo preparo.

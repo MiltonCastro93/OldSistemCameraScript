@@ -81,7 +81,7 @@ Este script agrega un comportamiento adicional al personaje:
 ---
 
 ## 🛠️ Tecnologías
-- **Unity** (versión utilizada en el prototipo)
+- **Unity** (versión utilizada en el prototipo 2021)
 - **C#** (control total del comportamiento de cámaras)
 
 ---

@@ -67,15 +67,15 @@ Este script agrega un comportamiento adicional al personaje:
 > Guardá tus capturas en una carpeta `/Images` y reemplazá los nombres en el README:
 
 <p align="center">
-  <img src="Images/camera_tps_view.png" width="500"/>
+  <img src="https://github.com/MiltonCastro93/OldSistemCameraScript/blob/main/Captura%20de%20pantalla%202025-11-17%20200523.png" width="500"/>
 </p>
 
 <p align="center">
-  <img src="Images/camera_fps_view.png" width="500"/>
+  <img src="https://github.com/MiltonCastro93/OldSistemCameraScript/blob/main/Captura%20de%20pantalla%202025-11-17%20200535.png" width="500"/>
 </p>
 
 <p align="center">
-  <img src="Images/player_look_system.png" width="500"/>
+  <img src="https://github.com/MiltonCastro93/OldSistemCameraScript/blob/main/Captura%20de%20pantalla%202025-11-17%20200545.png" width="500"/>
 </p>
 
 ---

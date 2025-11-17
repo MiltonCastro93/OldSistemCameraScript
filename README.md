@@ -64,8 +64,6 @@ Este script agrega un comportamiento adicional al personaje:
 
 ## 🖼️ Imágenes del Proyecto
 
-> Guardá tus capturas en una carpeta `/Images` y reemplazá los nombres en el README:
-
 <p align="center">
   <img src="https://github.com/MiltonCastro93/OldSistemCameraScript/blob/main/Captura%20de%20pantalla%202025-11-17%20200523.png" width="500"/>
 </p>
